@@ -51,7 +51,7 @@ class ThirdScreen extends StatelessWidget {
         automaticallyImplyLeading: false,
         title: Text('Магазин Все для бані'),
       ),
-      body: Column(
+      body: ListView(
         children: [
           Center(
             child: Text(
