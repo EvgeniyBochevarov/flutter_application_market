@@ -1,9 +1,18 @@
 import 'package:flutter/material.dart';
 
-class ThirdScreen extends StatelessWidget {
-  const ThirdScreen({super.key});
+class BuildRowLines extends StatelessWidget {
+  final String path;
+  final String text1;
+  final String text2;
+  const BuildRowLines({
+    super.key,
+    required this.path,
+    required this.text1,
+    required this.text2,
+  });
 
-  Row buildRow(String path, String text1, String text2) {
+  @override
+  Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
@@ -43,6 +52,10 @@ class ThirdScreen extends StatelessWidget {
       ],
     );
   }
+}
+
+class ThirdScreen extends StatelessWidget {
+  const ThirdScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -63,31 +76,34 @@ class ThirdScreen extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(height: 30),
-          Flexible(
-            child: buildRow(
-              'assets/jpg/med.jpg',
-              'Мед для лазні "Квітковий"',
-              '100 грн',
-            ),
+          const SizedBox(height: 30),
+          //Flexible(
+          // child:
+          BuildRowLines(
+            path: 'assets/jpg/med.jpg',
+            text1: 'Мед для лазні "Квітковий"',
+            text2: '100 грн',
           ),
-          SizedBox(height: 10),
-          Flexible(
-            child: buildRow(
-              'assets/jpg/kovsh.jpg',
-              "Ківш для лазні з дерев'яною ручкою",
-              '465 грн',
-            ),
+          //),
+          const SizedBox(height: 10),
+          //Flexible(
+          //  child:
+          BuildRowLines(
+            path: 'assets/jpg/kovsh.jpg',
+            text1: "Ківш для лазні з дерев'яною ручкою",
+            text2: '465 грн',
           ),
-          SizedBox(height: 10),
-          Flexible(
-            child: buildRow(
-              'assets/jpg/shapka.jpg',
-              "Шапка для бані «Патріотична», в’язана",
-              '700 грн',
-            ),
+          //),
+          const SizedBox(height: 10),
+          //Flexible(
+          //  child:
+          BuildRowLines(
+            path: 'assets/jpg/shapka.jpg',
+            text1: "Шапка для бані «Патріотична», в’язана",
+            text2: '700 грн',
           ),
-          SizedBox(height: 10),
+          // ),
+          const SizedBox(height: 10),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
