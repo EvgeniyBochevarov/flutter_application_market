@@ -66,7 +66,7 @@ class ThirdScreen extends StatelessWidget {
       ),
       body: ListView(
         children: [
-          Center(
+          const Center(
             child: Text(
               "ТОВАРИ",
               style: TextStyle(
@@ -77,32 +77,23 @@ class ThirdScreen extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 30),
-          //Flexible(
-          // child:
-          BuildRowLines(
+          const BuildRowLines(
             path: 'assets/jpg/med.jpg',
             text1: 'Мед для лазні "Квітковий"',
             text2: '100 грн',
           ),
-          //),
           const SizedBox(height: 10),
-          //Flexible(
-          //  child:
-          BuildRowLines(
+          const BuildRowLines(
             path: 'assets/jpg/kovsh.jpg',
             text1: "Ківш для лазні з дерев'яною ручкою",
             text2: '465 грн',
           ),
-          //),
           const SizedBox(height: 10),
-          //Flexible(
-          //  child:
-          BuildRowLines(
+          const BuildRowLines(
             path: 'assets/jpg/shapka.jpg',
             text1: "Шапка для бані «Патріотична», в’язана",
             text2: '700 грн',
           ),
-          // ),
           const SizedBox(height: 10),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
